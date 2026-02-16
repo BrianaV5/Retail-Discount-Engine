@@ -33,6 +33,7 @@ const products =
      inventory: 15
     }
 ];
+//product category discounts
 
 for (const product of products) {
 
@@ -56,9 +57,8 @@ switch (product.category) {
         }
 product.promoprice = (product.price * (1 - discount)).toFixed(2);
 }
-//console.log(products);
-
 //step 4
+//customer type discount
 let customerType = "student";
 
 for (const product of products) {
@@ -91,7 +91,7 @@ let carts = [
 ];
 
 
-
+// "for" loop for orders
 for (let i=1; i <= 3; i++) {
     let product = carts[i-1].items[0];
     let total = product.finalprice;
@@ -99,11 +99,13 @@ for (let i=1; i <= 3; i++) {
     console.log("customer "+ i + " total: " + total);
 } 
 //step 6 
+//one product
 let product = products[0]
 for (const key in product) {
     console.log(`${key}: ${product[key]}`);
 }
 //step 7 
+//all products!
 for (const product of products) {
     for (const[key, value]of Object.entries(product)){
         console.log(`${key}: ${value}`);
